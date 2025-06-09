@@ -1,0 +1,215 @@
+.eventos {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background: #f4f4f4;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.eventos h2 {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.eventos .evento {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  font-family: 'Anton';
+  margin-bottom: 30px;
+  min-height: 110px;
+}
+
+.eventos .evento .left,
+.eventos .evento .right {
+  position: relative;
+}
+
+.eventos .separator {
+  background: white;
+  width: 2px;
+  height: 50px;
+}
+
+.eventos .evento .right {
+  padding-left: 8px;
+}
+
+.eventos .comprar {
+  border: solid 2px !important;
+  color: white !important;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  padding: 5px 8px;
+  margin-top: 5px;
+}
+
+.eventos .comprar:hover {
+  opacity: 0.6;
+}
+
+/* Breesh */
+.eventos .bresh {
+  background: white;
+  color: var(--third-color);
+}
+
+.eventos .bresh .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos .bresh .separator {
+  background: var(--third-color);
+}
+
+.eventos .bresh .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.eventos .bresh .right {
+  padding-left: 0;
+}
+
+.eventos .bresh .comprar {
+  border: solid 2px var(--third-color);
+  background: var(--third-color) !important;
+  color: white !important;
+}
+
+.eventos .bresh .content span {
+  font-size: 1.4rem;
+}
+/* Breesh end */
+
+/* Experiencia */
+.eventos .experiencia {
+  background: var(--primary-color);
+  color: white;
+}
+
+.eventos .experiencia .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos .experiencia .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.eventos .experiencia .content span {
+  font-size: 1.4rem;
+}
+/* Experiencia end */
+
+/* Fanzone */
+.eventos .fanzone {
+  background: var(--secondary-color);
+  color: var(--third-color);
+}
+
+.eventos .fanzone .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos .fanzone .left span {
+  font-size: 2.5rem;
+}
+
+.eventos .fanzone .separator {
+  background: var(--third-color);
+}
+
+.eventos .fanzone .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Fanzone end */
+
+/* Amistoso */
+.eventos .amistoso {
+  background: var(--third-color);
+  color: white;
+  margin-bottom: 0;
+}
+
+.eventos .amistoso .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos .amistoso .left span {
+  font-size: 0.65rem !important;
+  font-family: 'Helvetica';
+  margin-bottom: 5px;
+}
+
+.eventos .amistoso .separator {
+  background: white;
+}
+
+.eventos .amistoso .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Amistoso end */
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .eventos .evento {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .eventos .evento {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .eventos {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .eventos {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .eventos .evento {
+    max-width: 395px;
+  }
+}
+
+@media (min-width: 1800px) {
+}

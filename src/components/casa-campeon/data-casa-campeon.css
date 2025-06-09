@@ -1,0 +1,60 @@
+.dataCasaCampeon {
+  padding-top: 15px;
+}
+
+.dataCasaCampeon h2,
+.dataCasaCampeon h5 {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dataCasaCampeon h5 {
+  font-size: 0.9rem;
+}
+
+.dataCasaCampeon p {
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* número de líneas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .dataCasaCampeon {
+    padding-top: 0;
+  }
+
+  .dataCasaCampeon p {
+    -webkit-line-clamp: 10; /* número de líneas */
+  }
+}
+
+@media (min-width: 1200px) {
+  .dataCasaCampeon h5 {
+    font-size: 1.15rem;
+  }
+
+  .dataCasaCampeon p {
+    font-size: 1.15rem;
+    -webkit-line-clamp: 11; /* número de líneas */
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

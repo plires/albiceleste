@@ -1,0 +1,53 @@
+.casaCampeon {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.casaCampeon .data {
+  order: 1;
+  text-align: center;
+}
+
+.casaCampeon .content {
+  margin-bottom: 30px;
+}
+
+.casaCampeon .content:last-child {
+  margin-bottom: 0;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .casaCampeon .content {
+    margin-bottom: 60px;
+  }
+
+  .casaCampeon .data {
+    order: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+  .casaCampeon .data {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1800px) {
+}

@@ -1,0 +1,79 @@
+.cards {
+  margin-bottom: 30px;
+}
+
+/* Estilos base */
+.cards .contentCard {
+  overflow: hidden; /* Oculta excedente */
+  position: relative;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards .contentCard img {
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease,
+    box-shadow 0.4s ease;
+  display: block;
+  width: 100%;
+}
+
+.cards .contentCard:active img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .cards .contentCard {
+    max-width: 100%;
+  }
+
+  .cards:hover .contentCard img {
+    filter: grayscale(100%);
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    box-shadow: none;
+  }
+
+  .cards .contentCard:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cards {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
