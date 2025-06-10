@@ -14,7 +14,7 @@ const Home = () => {
       <Slide />
       <Events />
       <Cards />
-      <section className='container'>
+      <section className='contentCta container'>
         <div className='row'>
           <div className='col-lg-10 offset-lg-1'>
             <div className='row'>
