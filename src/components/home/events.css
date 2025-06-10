@@ -3,10 +3,19 @@
   padding-bottom: 30px;
   text-align: center;
   background: #f4f4f4;
-  margin-top: 30px;
   margin-bottom: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.eventos .contentEventos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+  gap: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .eventos h2 {
@@ -16,12 +25,34 @@
 
 .eventos .evento {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 16px;
   font-family: 'Anton';
   margin-bottom: 30px;
-  min-height: 110px;
+  min-height: 175px;
+  max-width: 150px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 0;
+  transition-property: all !important;
+}
+
+.eventos .evento:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.eventos img {
+  height: 50px;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .eventos .evento .left,
@@ -31,12 +62,8 @@
 
 .eventos .separator {
   background: white;
-  width: 2px;
-  height: 50px;
-}
-
-.eventos .evento .right {
-  padding-left: 8px;
+  height: 2px;
+  width: 100%;
 }
 
 .eventos .comprar {
@@ -52,10 +79,50 @@
   opacity: 0.6;
 }
 
+/* Tienda */
+.eventos .tienda {
+  background: var(--secondary-color);
+  color: var(--third-color);
+}
+
+.eventos .tienda .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventos .tienda .separator {
+  background: var(--third-color);
+}
+
+.eventos .tienda .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.eventos .tienda .right {
+  padding-left: 0;
+}
+
+.eventos .tienda .comprar {
+  border: solid 2px var(--third-color);
+  background: var(--third-color) !important;
+  color: white !important;
+}
+
+.eventos .tienda .content span {
+  font-size: 1.4rem;
+}
+/* Tienda end */
+
 /* Breesh */
 .eventos .bresh {
   background: white;
   color: var(--third-color);
+  order: -1;
 }
 
 .eventos .bresh .left {
@@ -81,13 +148,13 @@
 }
 
 .eventos .bresh .comprar {
-  border: solid 2px var(--third-color);
-  background: var(--third-color) !important;
+  border: solid 2px #ea5d84;
+  background: #ea5d84 !important;
   color: white !important;
 }
 
 .eventos .bresh .content span {
-  font-size: 1.4rem;
+  font-size: 0.9rem;
 }
 /* Breesh end */
 
@@ -103,16 +170,8 @@
   align-items: center;
 }
 
-.eventos .experiencia .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-left: 16px;
-}
-
-.eventos .experiencia .content span {
-  font-size: 1.4rem;
+.eventos .experiencia span {
+  font-size: 1.5rem;
 }
 /* Experiencia end */
 
@@ -129,7 +188,7 @@
 }
 
 .eventos .fanzone .left span {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .eventos .fanzone .separator {
@@ -144,52 +203,60 @@
 }
 /* Fanzone end */
 
-/* Amistoso */
-.eventos .amistoso {
+/* Fixture */
+.eventos .fixture {
   background: var(--third-color);
   color: white;
   margin-bottom: 0;
 }
 
-.eventos .amistoso .left {
+.eventos .fixture .left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.eventos .amistoso .left span {
+.eventos .fixture .left span {
   font-size: 0.65rem !important;
   font-family: 'Helvetica';
   margin-bottom: 5px;
 }
 
-.eventos .amistoso .separator {
+.eventos .fixture .separator {
   background: white;
 }
 
-.eventos .amistoso .content {
+.eventos .fixture .content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* Amistoso end */
+/* Fixture end */
 
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
-  .eventos .evento {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media (min-width: 768px) {
+  .eventos .bresh {
+    order: initial;
+  }
 }
 
 @media (min-width: 992px) {
+  .eventos .contentEventos:hover .evento:not(:hover) {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+
+  .eventos .contentEventos:hover .evento:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+  }
+
   .eventos .evento {
-    max-width: 450px;
+    max-width: 165px;
   }
 }
 
@@ -197,19 +264,141 @@
   .eventos {
     margin-bottom: 60px;
   }
+
+  .eventos .evento {
+    max-width: 200px;
+  }
 }
 
 @media (min-width: 1400px) {
   .eventos {
     margin-bottom: 100px;
   }
+
+  .eventos .evento {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 248px;
+    min-height: 115px;
+  }
+
+  .eventos .evento .separator {
+    width: 2px;
+    height: 50px;
+  }
+
+  .eventos .evento img {
+    height: 40px;
+  }
+
+  .eventos .evento.experiencia img {
+    height: 33px;
+  }
+
+  .eventos .evento.fixture img {
+    height: 50px;
+  }
+
+  .eventos .evento.fixture span {
+    font-size: 1.5rem;
+  }
+
+  .eventos .evento.bresh img {
+    height: 43px;
+  }
+
+  .eventos .evento.fanzone span {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 1600px) {
   .eventos .evento {
-    max-width: 395px;
+    max-width: 285px;
+    min-height: 120px;
+  }
+
+  .eventos .evento button {
+    font-size: 1rem;
+  }
+
+  .eventos .evento img {
+    height: 53px;
+  }
+
+  .eventos .evento span {
+    font-size: 1.5rem;
+  }
+
+  .eventos .evento.experiencia img {
+    height: 40px;
+  }
+
+  .eventos .evento.experiencia span {
+    font-size: 1.75rem;
+  }
+
+  .eventos .evento.fixture img {
+    height: 60px;
+  }
+
+  .eventos .evento.fixture span {
+    font-size: 1.75rem;
+  }
+
+  .eventos .evento.bresh img {
+    height: 55px;
+  }
+
+  .eventos .fanzone .left span {
+    font-size: 2rem;
+  }
+
+  .eventos .evento.fanzone span {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1800px) {
+  .eventos .contentEventos {
+    justify-content: space-around;
+  }
+
+  .eventos .evento {
+    max-width: 320px;
+    min-height: 125px;
+  }
+
+  .eventos .evento.tienda img,
+  .eventos .evento.bresh img {
+    height: 60px;
+  }
+
+  .eventos .evento.experiencia img {
+    height: 53px;
+  }
+
+  .eventos .evento.tienda span {
+    font-size: 1.5rem;
+  }
+
+  .eventos .evento.bresh span {
+    font-size: 1rem;
+  }
+
+  .eventos .evento.fixture span {
+    font-size: 2rem;
+  }
+
+  .eventos .evento.fanzone span {
+    font-size: 2rem;
+  }
+
+  .eventos .evento.fanzone .right span {
+    font-size: 1.3rem;
+  }
+
+  .eventos .evento:hover button {
+    font-size: 1.1rem;
+  }
 }
