@@ -72,11 +72,11 @@ header nav a {
 }
 
 header nav a:hover {
-  color: var(--primary-color) !important;
+  color: var(--third-color) !important;
 }
 
 header nav a.active {
-  color: var(--primary-color) !important;
+  color: var(--third-color) !important;
 }
 
 header .social {
@@ -170,7 +170,7 @@ header .social img {
 
   header nav a {
     font-size: 1.15rem;
-    color: var(--primary-color) !important;
+    color: var(--third-color) !important;
   }
 
   header nav a.active {
@@ -190,7 +190,7 @@ header .social img {
     width: auto;
     position: relative;
     padding: 0 !important;
-    padding-left: 60px !important;
+    padding-left: 130px !important;
   }
 
   header.fixed {
@@ -211,7 +211,7 @@ header .social img {
   }
 
   header.fixed nav a {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   header.fixed .social {
@@ -232,7 +232,7 @@ header .social img {
   }
 
   header nav ul li {
-    margin: 0 50px 0 50px;
+    margin: 0 35px 0 35px;
   }
 
   header nav ul li:last-child {
@@ -240,7 +240,7 @@ header .social img {
   }
 
   header nav a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   header.fixed {
@@ -253,7 +253,7 @@ header .social img {
   }
 
   header .social {
-    padding-left: 100px !important;
+    padding-left: 200px !important;
   }
 
   header .social img {

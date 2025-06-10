@@ -72,7 +72,7 @@ const Header = () => {
         <ul>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/fan-zone'
               onClick={() => changeIconMobile()}
             >
@@ -81,7 +81,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/pop-ups'
               onClick={() => changeIconMobile()}
             >
@@ -90,7 +90,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/casa-campeon'
               onClick={() => changeIconMobile()}
             >
@@ -99,18 +99,27 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/tienda'
               onClick={() => changeIconMobile()}
             >
               TIENDA
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className='transition anton'
+              to='/faqs'
+              onClick={() => changeIconMobile()}
+            >
+              FAQS
+            </NavLink>
+          </li>
         </ul>
         <ul className='social transition'>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/#'
               target='_blank'
               rel='noopener'
@@ -125,7 +134,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className='transition'
+              className='transition anton'
               to='/#'
               target='_blank'
               rel='noopener'
@@ -135,21 +144,6 @@ const Header = () => {
                 className='img-fluid transition'
                 src={tiktok}
                 alt='tik tok'
-              />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className='transition'
-              to='/#'
-              target='_blank'
-              rel='noopener'
-              onClick={() => changeIconMobile()}
-            >
-              <img
-                className='img-fluid transition'
-                src={facebook}
-                alt='facebook'
               />
             </NavLink>
           </li>
