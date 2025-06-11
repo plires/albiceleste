@@ -11,12 +11,13 @@ const SectionFormulario = () => {
           <div className='row'>
             <div className='col-md-6 contentLogo'>
               <img
+                data-aos='fade-up'
                 className='img-fluid logoAfa'
                 src={logoAlbiceleste}
                 alt='logo albiceleste'
               />
             </div>
-            <div className='col-md-6 contentForm'>
+            <div data-aos='fade-up' className='col-md-6 contentForm'>
               <Formulario />
             </div>
           </div>

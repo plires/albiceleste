@@ -42,7 +42,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='gente container'>
+      <section data-aos='fade-up' className='gente container'>
         <div className='row'>
           <div className='col-lg-10 offset-lg-1'>
             <img className='img-fluid' src={gente} alt='gente obelisco' />
