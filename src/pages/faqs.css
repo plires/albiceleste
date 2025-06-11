@@ -1,0 +1,94 @@
+.faqs {
+  margin-bottom: 60px;
+}
+
+.faqs .header {
+  margin-bottom: 30px;
+}
+
+.faqs .text {
+  margin-bottom: 30px;
+}
+
+.faqs .contentTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faqs h1 {
+  color: white;
+  background: var(--third-color);
+  margin-top: 30px;
+  width: fit-content;
+  padding: 16px 32px;
+  text-align: center;
+  font-family: 'Anton';
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.faqs .acordion {
+  position: relative;
+  z-index: 1;
+}
+
+.faqs .accordion-button {
+  color: var(--third-color) !important;
+}
+
+.faqs .accordion-button:not(.collapsed) {
+  background: var(--secondary-color) !important;
+}
+
+.faqs .accordion-body {
+  font-size: 14px;
+  background: #f8f7f7;
+  color: var(--third-color);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .faqs .acordion {
+    margin-top: -50px;
+  }
+
+  .faqs .Separador:last-child {
+    margin-top: -60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .faqs .accordion-button {
+    font-size: 1.15rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .faqs .accordion-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .faqs .accordion-body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+  .faqs .acordion {
+    margin-top: -70px;
+  }
+}
