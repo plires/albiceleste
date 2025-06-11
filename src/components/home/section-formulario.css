@@ -7,16 +7,23 @@
 }
 
 .sectionFormulario .logoAfa {
-  max-width: 250px;
+  max-width: 265px;
   margin-top: 16px;
   margin-bottom: 32px;
 }
 
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
+  .sectionFormulario .logoAfa {
+    max-width: 350px;
+  }
 }
 
 @media (min-width: 768px) {
+  .sectionFormulario .logoAfa {
+    max-width: 320px;
+  }
+
   .sectionFormulario {
     margin-top: 60px;
   }
@@ -34,17 +41,6 @@
     align-items: center;
   }
 
-  /* .sectionFormulario .contentLogo::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 50%;
-    right: 3%;
-    top: 50%;
-    transform: translateY(-50%);
-    border-right: solid 2px var(--secondary-color);
-  } */
-
   .sectionFormulario .contentLogo .logoAfa {
     margin: 0;
   }
@@ -60,6 +56,9 @@
 }
 
 @media (min-width: 1400px) {
+  .sectionFormulario .logoAfa {
+    max-width: 420px;
+  }
 }
 
 @media (min-width: 1600px) {
