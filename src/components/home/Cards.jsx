@@ -19,7 +19,7 @@ const Cards = () => {
               </Link>
             </div>
             <div data-aos='fade-up' className='col-sm-6 p-0 contentCard'>
-              <Link to='/cultura-albiceleste'>
+              <Link to='/albiceleste-itinerante'>
                 <img className='img-fluid' src={fanZone} alt='fan zone card' />
               </Link>
             </div>

@@ -1,9 +1,8 @@
-import { getItemsFanZone, getImageURL } from '@/utils/dataUtils.js'
+import { getImageURL } from '@/utils/dataUtils.js'
 
 import './details-section.css'
 
-const DetailsSection = ({ title, description = false }) => {
-  const items = getItemsFanZone('items')
+const DetailsSection = ({ items, title, description = false }) => {
   return (
     <div className='detailsSection'>
       <div className='container'>

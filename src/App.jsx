@@ -7,6 +7,7 @@ import Header from '@/components/commons/Header'
 import Home from '@/pages/Home'
 import FanZone from '@/pages/FanZone'
 import CulturaAlbiceleste from '@/pages/CulturaAlbiceleste'
+import AlbicelesteItinerante from '@/pages/AlbicelesteItinerante'
 import CasaCampeon from '@/pages/CasaCampeon'
 import Tienda from '@/pages/Tienda'
 import Faqs from '@/pages/Faqs'
@@ -27,6 +28,10 @@ function App() {
             <Route
               path='/cultura-albiceleste'
               element={<CulturaAlbiceleste />}
+            />
+            <Route
+              path='/albiceleste-itinerante'
+              element={<AlbicelesteItinerante />}
             />
             <Route path='/tienda' element={<Tienda />} />
             <Route path='/faqs' element={<Faqs />} />

@@ -3,9 +3,12 @@ import slideDesktop from '@/assets/img/fan-zone/header-fan-zone.webp'
 import DetailsSection from '@/components/commons/DetailsSection.jsx'
 import Separador from '@/components/commons/Separador.jsx'
 
+import { getItemsFanZone, getImageURL } from '@/utils/dataUtils.js'
+
 import './sub-sections.css'
 
 const FanZone = () => {
+  const items = getItemsFanZone('items')
   return (
     <section data-aos='fade-up' className='subSections fanZone'>
       <div className='contentTitle'>
@@ -46,11 +49,7 @@ const FanZone = () => {
         </div>
       </div>
 
-      <DetailsSection
-        title='PRINCIPALES ATRACCIONES'
-        description='La Albiceleste Itinerante será la mejor forma de
-acompañar a la Selección y los Hinchas en todos los partidos:'
-      />
+      <DetailsSection items={items} title='PRINCIPALES ATRACCIONES' />
 
       <Separador size='sm' />
     </section>

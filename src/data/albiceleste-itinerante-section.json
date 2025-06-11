@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "ACTIVACIONES POP UP DONDE JUEGUE ARGENTINA",
+      "img_src": "1.webp"
+    },
+    {
+      "id": 2,
+      "name": "PUNTO DE ENCUENTRO PARA HINCHAS (FIESTA Y BANDERAZO)",
+      "img_src": "2.webp"
+    },
+    {
+      "id": 3,
+      "name": "UBICACIÓN ESTRATÉGICA. (INMEDIACIONES ESTADIO, BARES O SHOPPINGS)",
+      "img_src": "3.webp"
+    },
+    {
+      "id": 4,
+      "name": "PANTALLA GIGANTE, MERCHANDISING STORE Y ACTIVACIONES.",
+      "img_src": "4.webp"
+    }
+  ]
+}
