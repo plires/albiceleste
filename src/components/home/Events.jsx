@@ -17,13 +17,10 @@ const Events = () => {
 
       <div className='row contentEventos'>
         {/* Tienda */}
-        <Link
-          to='#'
-          data-aos='fade-up'
-          target='_blank'
-          rel='noopener'
-          className='evento tienda'
-        >
+        <div data-aos='fade-up' className='evento tienda'>
+          <div className='overlay'>
+            <span className='proximamente'>PRÓXIMAMENTE</span>
+          </div>
           <div className='left'>
             <img src={tienda} alt='tienda' />
           </div>
@@ -34,17 +31,14 @@ const Events = () => {
               <button className='btn comprar transition'>VER TIENDA</button>
             </div>
           </div>
-        </Link>
+        </div>
         {/* Tienda end */}
 
         {/* Experiencia */}
-        <Link
-          to='#'
-          data-aos='fade-up'
-          target='_blank'
-          rel='noopener'
-          className='evento experiencia'
-        >
+        <div data-aos='fade-up' className='evento experiencia'>
+          <div className='overlay'>
+            <span className='proximamente'>PRÓXIMAMENTE</span>
+          </div>
           <div className='left'>
             <span>EXPERIENCIA</span>
           </div>
@@ -52,7 +46,7 @@ const Events = () => {
           <div className='right'>
             <img src={casa} alt='casa' />
           </div>
-        </Link>
+        </div>
         {/* Experiencia end */}
 
         {/* Bresh */}
@@ -104,13 +98,10 @@ const Events = () => {
         {/* Fixture end */}
 
         {/* FanZone */}
-        <Link
-          to='#'
-          data-aos='fade-up'
-          target='_blank'
-          rel='noopener'
-          className='evento fanzone'
-        >
+        <div data-aos='fade-up' className='evento fanzone'>
+          <div className='overlay'>
+            <span className='proximamente'>PRÓXIMAMENTE</span>
+          </div>
           <div className='left'>
             <span>FANZONE</span>
           </div>
@@ -123,7 +114,7 @@ const Events = () => {
               </button>
             </div>
           </div>
-        </Link>
+        </div>
         {/* FanZone end */}
       </div>
     </section>

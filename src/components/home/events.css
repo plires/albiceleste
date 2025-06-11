@@ -24,6 +24,7 @@
 }
 
 .eventos .evento {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,9 +39,34 @@
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   margin-bottom: 0;
   transition-property: all !important;
+  overflow: hidden;
+}
+
+.eventos .evento .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.eventos .evento .overlay .proximamente {
+  background: white;
+  color: var(--third-color);
+  border-radius: 16px;
+  padding: 2px 6px;
+  font-size: 0.65rem;
+  font-family: 'Helvetica';
+  border: solid 1px var(--third-color) !important;
+  margin-bottom: 15px;
 }
 
 .eventos .evento:hover {
@@ -282,6 +308,17 @@
     min-height: 115px;
   }
 
+  .eventos .evento .overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .eventos .evento .overlay .proximamente {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0;
+  }
+
   .eventos .evento .separator {
     width: 2px;
     height: 50px;
@@ -367,6 +404,12 @@
   .eventos .evento {
     max-width: 320px;
     min-height: 125px;
+  }
+
+  .eventos .evento .overlay .proximamente {
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0;
   }
 
   .eventos .evento.tienda img,
