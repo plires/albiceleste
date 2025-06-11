@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "TRANSMISIÓN DE PARTIDOS EN VIVO EN PANTALLA GIGANTE",
+      "img_src": "1.webp"
+    },
+    {
+      "id": 2,
+      "name": "STREAMING STUDIOS",
+      "img_src": "2.webp"
+    },
+    {
+      "id": 3,
+      "name": "ACTIVACIONES EXCLUSIVAS",
+      "img_src": "3.webp"
+    },
+    {
+      "id": 4,
+      "name": "SHOWS & FIESTAS",
+      "img_src": "4.webp"
+    },
+    {
+      "id": 5,
+      "name": "GASTRONOMIA ARGENTINA",
+      "img_src": "5.webp"
+    },
+    {
+      "id": 6,
+      "name": "TORNEOS AMATEUR RELÁMPAGO",
+      "img_src": "6.webp"
+    },
+    {
+      "id": 7,
+      "name": "BENEFICIOS EXCLUSIVOS PARA ARGENTINOS",
+      "img_src": "7.webp"
+    }
+  ]
+}

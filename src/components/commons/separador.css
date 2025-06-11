@@ -1,6 +1,11 @@
 .Separador {
-  margin: auto;
   display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.Separador img {
+  margin: auto;
 }
 /* MEDIA QUERIES */
 @media (min-width: 576px) {

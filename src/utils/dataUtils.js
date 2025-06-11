@@ -1,3 +1,7 @@
+import itemsFanZone from '@/data/fanzone-section.json'
+
+export const getItemsFanZone = key => itemsFanZone[key]
+
 export const scrollToTop = (setMessage, msg, textAreaRef) => {
   setMessage(msg)
 

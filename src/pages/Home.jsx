@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </section>
       <SectionFormulario />
-      <Separador />
+      <Separador size='lg' />
     </section>
   )
 }
