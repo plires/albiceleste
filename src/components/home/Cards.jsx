@@ -14,12 +14,12 @@ const Cards = () => {
         <div className='col-lg-10 offset-lg-1'>
           <div className='row'>
             <div data-aos='fade-up' className='col-sm-6 p-0 contentCard'>
-              <Link to='/miami'>
+              <Link to='/fan-zone'>
                 <img className='img-fluid' src={miami} alt='miami card' />
               </Link>
             </div>
             <div data-aos='fade-up' className='col-sm-6 p-0 contentCard'>
-              <Link to='/fan-zone'>
+              <Link to='/cultura-albiceleste'>
                 <img className='img-fluid' src={fanZone} alt='fan zone card' />
               </Link>
             </div>
@@ -33,7 +33,7 @@ const Cards = () => {
               </Link>
             </div>
             <div data-aos='fade-up' className='col-sm-6 p-0 contentCard'>
-              <Link to='/tienda'>
+              <Link to='/cultura-albiceleste'>
                 <img className='img-fluid' src={tienda} alt='tienda card' />
               </Link>
             </div>

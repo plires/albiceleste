@@ -52,7 +52,7 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className='transition' to='/pop-ups'>
+                <NavLink className='transition' to='/cultura-albiceleste'>
                   POP UPS
                 </NavLink>
               </li>

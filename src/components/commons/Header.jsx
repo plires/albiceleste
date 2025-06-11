@@ -82,7 +82,7 @@ const Header = () => {
           <li>
             <NavLink
               className='transition anton'
-              to='/pop-ups'
+              to='/cultura-albiceleste'
               onClick={() => changeIconMobile()}
             >
               POP UPS
