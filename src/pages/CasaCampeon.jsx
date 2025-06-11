@@ -1,84 +1,48 @@
-import ImgCasaCampeon from '@/components/casa-campeon/ImgCasaCampeon.jsx'
-import DataCasaCampeon from '@/components/casa-campeon/DataCasaCampeon.jsx'
-import huella from '@/assets/img/huella.webp'
+import slideMobile from '@/assets/img/casa/header-casa-mobile.webp'
+import slideDesktop from '@/assets/img/casa/header-casa.webp'
+import DetailsSection from '@/components/commons/DetailsSection.jsx'
+import Separador from '@/components/commons/Separador.jsx'
 
-import './casa-campeon.css'
+import { getItemsCasa } from '@/utils/dataUtils.js'
+
+import './sub-sections.css'
 
 const CasaCampeon = () => {
+  const items = getItemsCasa('items')
   return (
-    <section className='casaCampeon container'>
-      <div className='row content'>
-        <div data-aos='fade-up' className='col-lg-6 img'>
-          <ImgCasaCampeon srcImg={huella} altImg='la casa del campeon 1' />
-        </div>
-        <div data-aos='fade-up' className='col-lg-6 data'>
-          <DataCasaCampeon
-            title='La Casa del Campeón'
-            subTitle='atracción paga e inmersiva en Miami.'
-            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis'
-          />
+    <section data-aos='fade-up' className='subSections casa'>
+      <div className='contentTitle'>
+        <h1>LA CASA DEL CAMPEÓN</h1>
+      </div>
+      <picture>
+        <source media='(max-width: 768px)' srcSet={slideMobile} />
+        <img
+          data-aos='fade-up'
+          className='img-fluid imgHeader'
+          src={slideDesktop}
+          alt='slide albiceleste'
+        />
+      </picture>
+
+      <div className='text container'>
+        <div className='row'>
+          <div className='col-lg-10 offset-lg-1'>
+            <p data-aos='fade-up'>
+              La Casa del Campeón es un recorrido inmersivo por la historia, la
+              pasión y la gloria del fútbol argentino.
+            </p>
+            <p data-aos='fade-up'>
+              Diseñada para hinchas fanáticos y familias, contará con cinco
+              zonas temáticas con memorabilia legendaria, contenido interactivo
+              y narrativas audiovisuales de última generación.
+            </p>
+          </div>
         </div>
       </div>
-      <div className='row content'>
-        <div data-aos='fade-up' className='col-lg-6 data'>
-          <DataCasaCampeon
-            title='La Casa del Campeón'
-            subTitle='atracción paga e inmersiva en Miami.'
-            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis'
-          />
-        </div>
-        <div data-aos='fade-up' className='col-lg-6 img'>
-          <ImgCasaCampeon srcImg={huella} altImg='la casa del campeon 1' />
-        </div>
-      </div>
-      <div className='row content'>
-        <div data-aos='fade-up' className='col-lg-6 img'>
-          <ImgCasaCampeon srcImg={huella} altImg='la casa del campeon 1' />
-        </div>
-        <div data-aos='fade-up' className='col-lg-6 data'>
-          <DataCasaCampeon
-            title='La Casa del Campeón'
-            subTitle='atracción paga e inmersiva en Miami.'
-            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
-            velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis'
-          />
-        </div>
-      </div>
+
+      <DetailsSection items={items} title='DETALLES DE LA EXPERIENCIA' />
+
+      <Separador size='sm' />
     </section>
   )
 }

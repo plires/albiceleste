@@ -17,8 +17,13 @@ const DetailsSection = ({ items, title, description = false }) => {
               )}
               {items.map(item => (
                 <div data-aos='fade-up' className='item' key={item.id}>
-                  <img src={getImageURL(item.img_src)} alt={item.name} />
-                  <p>{item.name}</p>
+                  <div>
+                    <img src={getImageURL(item.img_src)} alt={item.name} />
+                    <p>{item.name}</p>
+                  </div>
+                  {item.description && (
+                    <p className='descriptionItem'>{item.description}</p>
+                  )}
                 </div>
               ))}
             </div>

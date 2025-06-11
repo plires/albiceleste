@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Viaje inmersivo:",
+      "description": "La experiencia lleva a los visitantes en un viaje a través de la historia del fútbol argentino y los éxitos de la Selección, con instalaciones tecnológicas, recursos teatrales y juegos interactivos.",
+      "img_src": "1.webp"
+    },
+    {
+      "id": 2,
+      "name": "Cinco instalaciones temáticas:",
+      "description": "Cada instalación está pensada para sentir y vivir la pasión del fútbol argentino, despertando emociones y creando recuerdos únicos para los participantes. ",
+      "img_src": "2.webp"
+    },
+    {
+      "id": 3,
+      "name": "Experiencia familiar:",
+      "description": "La experiencia es adecuada para todas las edades, y se anima a los visitantes a participar activamente. Cuenta con una zona exclusiva de juegos y destrezas.",
+      "img_src": "3.webp"
+    },
+    {
+      "id": 4,
+      "name": "Duración:",
+      "description": "La experiencia completa dura aproximadamente 35 minutos.",
+      "img_src": "4.webp"
+    },
+    {
+      "id": 5,
+      "name": "Ubicación:",
+      "description": "Próxima locación confirmar.",
+      "img_src": "5.webp"
+    },
+    {
+      "id": 6,
+      "name": "Precio:",
+      "description": "A confirmar próximamente.",
+      "img_src": "6.webp"
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 import itemsFanZone from '@/data/fanzone-section.json'
 import itemsAlbicelesteItinerante from '@/data/albiceleste-itinerante-section.json'
+import itemsCasa from '@/data/casa-section.json'
 
 export const getItemsFanZone = key => itemsFanZone[key]
 export const getItemsAlbicelesteItinerante = key =>
   itemsAlbicelesteItinerante[key]
+export const getItemsCasa = key => itemsCasa[key]
 
 export const scrollToTop = (setMessage, msg, textAreaRef) => {
   setMessage(msg)
