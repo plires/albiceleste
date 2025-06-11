@@ -82,10 +82,10 @@ const Header = () => {
           <li>
             <NavLink
               className='transition anton'
-              to='/cultura-albiceleste'
+              to='/albiceleste-itinerante'
               onClick={() => changeIconMobile()}
             >
-              POP UPS
+              ITINERANTE
             </NavLink>
           </li>
           <li>
@@ -95,6 +95,15 @@ const Header = () => {
               onClick={() => changeIconMobile()}
             >
               LA CASA
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className='transition anton'
+              to='/cultura-albiceleste'
+              onClick={() => changeIconMobile()}
+            >
+              CULTURA
             </NavLink>
           </li>
           <li>

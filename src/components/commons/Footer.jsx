@@ -52,13 +52,18 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className='transition' to='/cultura-albiceleste'>
-                  POP UPS
+                <NavLink className='transition' to='/albiceleste-itinerante'>
+                  ITINERANTE
                 </NavLink>
               </li>
               <li>
                 <NavLink className='transition' to='/casa-campeon'>
                   LA CASA
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className='transition' to='/cultura-albiceleste'>
+                  CULTURA
                 </NavLink>
               </li>
               <li>
