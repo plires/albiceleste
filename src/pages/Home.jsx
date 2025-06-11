@@ -3,6 +3,7 @@ import Events from '@/components/home/Events.jsx'
 import Cards from '@/components/home/Cards.jsx'
 import Cta from '@/components/home/Cta.jsx'
 import SectionFormulario from '@/components/home/SectionFormulario.jsx'
+import Separador from '@/components/commons/Separador.jsx'
 
 import ctaAlbiceleste from '@/assets/img/albiceleste-saber-mas.webp'
 import ctaTienda from '@/assets/img/tienda-oficial.webp'
@@ -49,6 +50,7 @@ const Home = () => {
         </div>
       </section>
       <SectionFormulario />
+      <Separador />
     </section>
   )
 }
