@@ -6,6 +6,39 @@ use PHPMailer\PHPMailer\PHPMailer;
 class App
 {
 
+  public function subscribeUserInPerfit($post)
+  {
+
+    if (is_object($post)) {
+      $post = (array) $post;
+    }
+
+    if (isset($post['newsletter'])) {
+
+      $perfit = new PerfitSDK\Perfit(['apiKey' => $_ENV['VITE_PERFIT_API_KEY']]);
+      $listId = $_ENV['VITE_PERFIT_LIST'];
+
+      $response = $perfit->post(
+        '/lists/' . $listId . '/contacts',
+        [
+          'firstName' => $post['name'],
+          'email' => $post['email'],
+          'customFields' =>
+          [
+            [
+              'id' => 12,
+              'value' => $post['utm_source']
+            ]
+          ]
+        ]
+      );
+
+      return $response;
+    }
+
+    return false;
+  }
+
   public function validEmail($email)
   {
     $mail_valid = 0;
@@ -61,6 +94,10 @@ class App
       array_push($errors, 'Ingresá tu nombre.');
     }
 
+    if ($this->emptyField($require->phone)) {
+      array_push($errors, 'Ingresá un teléfono de contacto.');
+    }
+
     if ($this->emptyField($require->comments)) {
       array_push($errors, 'Ingresá tu.');
     }
@@ -74,7 +111,7 @@ class App
     $cu = curl_init();
     curl_setopt($cu, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
     curl_setopt($cu, CURLOPT_POST, 1);
-    curl_setopt($cu, CURLOPT_POSTFIELDS, http_build_query(array('secret' => $_ENV['VITE_RECAPTCHA_SECRET_KEY_V3'], 'response' => $token)));
+    curl_setopt($cu, CURLOPT_POSTFIELDS, http_build_query(array('secret' => $_ENV['RECAPTCHA_SECRET_KEY_V3'], 'response' => $token)));
     curl_setopt($cu, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($cu);
     curl_close($cu);
@@ -89,21 +126,21 @@ class App
 
       case 'Cliente':
         //ENVIOS
-        $objectPhpMailer->setFrom($post['email'], $_ENV['VITE_NAME_APP']);
+        $objectPhpMailer->setFrom($post['email']);
         $objectPhpMailer->addAddress($destinationEmail); //Add a recipient
         $objectPhpMailer->addReplyTo($post['email']);
 
-        if ($_ENV['VITE_EMAIL_RECIPENT_BCC'] != '') {
-          $objectPhpMailer->addBCC($_ENV['VITE_EMAIL_RECIPENT_BCC']); //Agregar copia oculta;
+        if ($_ENV['EMAIL_RECIPENT_BCC'] != '') {
+          $objectPhpMailer->addBCC($_ENV['EMAIL_RECIPENT_BCC']); //Agregar copia oculta;
         }
 
         break;
 
       case 'Usuario':
         //ENVIOS
-        $objectPhpMailer->setFrom($destinationEmail, $_ENV['VITE_NAME_APP']);
+        $objectPhpMailer->setFrom($destinationEmail, $_ENV['VITE_NAME_LANDING']);
         $objectPhpMailer->addAddress($post['email']); //Add a recipient
-        $objectPhpMailer->addReplyTo($_ENV['VITE_MAIL_CONTACTO'], $_ENV['VITE_NAME_APP']);
+        $objectPhpMailer->addReplyTo($_ENV['MAIL_CONTACTO'], $_ENV['VITE_NAME_LANDING']);
         break;
     }
 
@@ -117,12 +154,12 @@ class App
 
       case 'Contacto Cliente':
         $email['template'] = $this->selectEmailTemplate($post, 'to_client', $destinationEmail);
-        $email['subject'] = 'Nuevo Consulta desde Formulario web - ' . $_ENV['VITE_NAME_APP'];
+        $email['subject'] = 'Nuevo Consulta desde Landing ' . $_ENV['VITE_NAME_LANDING'];
         break;
 
       case 'Contacto Usuario':
         $email['template'] = $this->selectEmailTemplate($post, 'to_user', $destinationEmail);
-        $email['subject'] = $_ENV['VITE_EMAIL_SUBJECT_USUARIO'];
+        $email['subject'] = $_ENV['EMAIL_SUBJECT_USUARIO'];
         break;
     }
 
@@ -133,13 +170,13 @@ class App
   {
 
     // $objectPhpMailer->SMTPDebug  = 3;
-    $objectPhpMailer->Host       = $_ENV['VITE_SMTP'];
+    $objectPhpMailer->Host       = $_ENV['SMTP'];
     $objectPhpMailer->SMTPAuth   = true;
-    $objectPhpMailer->Username   = $_ENV['VITE_EMAIL_CLIENT'];
-    $objectPhpMailer->Password   = $_ENV['VITE_PASSWORD'];
-    $objectPhpMailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $objectPhpMailer->CharSet    = $_ENV['VITE_EMAIL_CHARSET'];
-    $objectPhpMailer->Port       = $_ENV['VITE_EMAIL_PORT'];
+    $objectPhpMailer->Username   = $_ENV['EMAIL_CLIENT'];
+    $objectPhpMailer->Password   = $_ENV['PASSWORD'];
+    $objectPhpMailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $objectPhpMailer->CharSet    = $_ENV['EMAIL_CHARSET'];
+    $objectPhpMailer->Port       = $_ENV['EMAIL_PORT'];
 
     return $objectPhpMailer;
   }
@@ -184,9 +221,9 @@ class App
 
     (isset($post['name'])) ? $name = $post['name'] : $name = null;
     (isset($post['email'])) ? $email = $post['email'] : $email = null;
+    (isset($post['phone'])) ? $phone = $post['phone'] : $phone = null;
     (isset($post['comments'])) ? $comments = $post['comments'] : $comments = null;
-    (isset($post['origin'])) ? $origin = $post['origin'] : $origin = null;
-    (isset($post['utm_source'])) ? $utm_source = $post['utm_source'] : $utm_source = 'no set';
+    (isset($post['interes'])) ? $interes = $post['interes'] : $interes = null;
 
     if (!defined('BASE')) {
       define('BASE', $_ENV['VITE_ROOT']);
@@ -198,21 +235,21 @@ class App
       '{email_client}',
       '{name_user}',
       '{email_user}',
+      '{phone_user}',
       '{comments_user}',
-      '{utm_source}',
-      '{origin}',
+      '{interes}',
       '{date}',
       '{base}'
     );
 
     $values = array(
-      $_ENV['VITE_NAME_APP'],
-      $_ENV['VITE_MAIL_CONTACTO'],
+      $_ENV['VITE_NAME_LANDING'],
+      $_ENV['MAIL_CONTACTO'],
       $name,
       $email,
+      $phone,
       $comments,
-      $utm_source,
-      $origin,
+      $interes,
       date('d-m-Y'),
       BASE
     );

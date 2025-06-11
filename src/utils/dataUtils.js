@@ -1,12 +1,16 @@
-import accesorios from '@/data/accesorios.json'
-import accesoriosSection from '@/data/accesorios-section.json'
-import images from '@/data/carrusel-empresa.json'
-import cabinas from '@/data/carrusel-home-cabinas.json'
+export const scrollToTop = (setMessage, msg, textAreaRef) => {
+  setMessage(msg)
 
-export const getAccesorios = key => accesorios[key]
-export const getAccesoriosSection = key => accesoriosSection[key]
-export const getImgCarruselEmpresa = key => images[key]
-export const getCabinas = key => cabinas[key]
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  })
+
+  setTimeout(() => {
+    textAreaRef.focus()
+  }, 500)
+}
 
 export const validation = values => {
   const errors = {}
@@ -18,30 +22,16 @@ export const validation = values => {
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
     errors.email = 'Ingresá un correo válido'
   }
+  if (!values.phone) {
+    errors.phone = 'Ingresá un teléfono'
+  }
   if (!values.comments) {
-    errors.comments = 'Enviá tu mensaje'
+    errors.comments = 'Enviá tu consulta'
+  }
+  if (!values.interes || !values.interes === '') {
+    errors.interes = 'Seleccioná un interés'
   }
   return errors
-}
-
-export const getLink = link => {
-  var linkToAttribute = '#'
-
-  switch (link) {
-    case 'whatsapp':
-      linkToAttribute = import.meta.env.VITE_LINK_TO_WHATSAPP
-      break
-    case 'mail':
-      linkToAttribute = import.meta.env.VITE_MAILTO
-      break
-    case 'address':
-      linkToAttribute = import.meta.env.VITE_ADDRESS
-      break
-
-    default:
-      linkToAttribute = '#'
-  }
-  return linkToAttribute
 }
 
 export const getImageURL = name => {

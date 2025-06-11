@@ -2,9 +2,11 @@ import Slide from '@/components/home/Slide.jsx'
 import Events from '@/components/home/Events.jsx'
 import Cards from '@/components/home/Cards.jsx'
 import Cta from '@/components/home/Cta.jsx'
+import SectionFormulario from '@/components/home/SectionFormulario.jsx'
 
 import ctaAlbiceleste from '@/assets/img/albiceleste-saber-mas.webp'
 import ctaTienda from '@/assets/img/tienda-oficial.webp'
+import gente from '@/assets/img//gente.webp'
 
 import './home.css'
 
@@ -38,6 +40,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className='gente container'>
+        <div className='row'>
+          <div className='col-lg-10 offset-lg-1'>
+            <img className='img-fluid' src={gente} alt='gente obelisco' />
+          </div>
+        </div>
+      </section>
+      <SectionFormulario />
     </section>
   )
 }
