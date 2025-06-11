@@ -3,7 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import ErrorInput from '@/components/commons/ErrorInput.jsx'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import Loader from '@/components/commons/Loader'
 import { validation } from '@/utils/dataUtils'
 import 'react-toastify/dist/ReactToastify.css'
@@ -94,9 +94,7 @@ export default function Formulario() {
 
   return (
     <>
-      {loading && <Loader />}
       <section className={`${styles.formulario}`}>
-        <ToastContainer autoClose={false} />
         <div id='formulario'>
           <Formik
             innerRef={ref}
@@ -109,7 +107,9 @@ export default function Formulario() {
                 data-aos='fade-up'
                 id='form_contacto'
                 onSubmit={handleSubmit}
+                style={{ position: 'relative' }}
               >
+                {loading && <Loader />}
                 <div className='row'>
                   <div className={`col-sm-12 mb-4 ${styles.inputContainer}`}>
                     <label htmlFor='name' className={`${styles.label}`}>
@@ -166,13 +166,6 @@ export default function Formulario() {
                   <div
                     className={`col-sm-12 mb-3 ${styles.inputContainer} ${styles.selectContainer}`}
                   >
-                    {/* <label
-                      style={{ 'font-size': '16px' }}
-                      htmlFor='interes'
-                      className={`${styles.label} ${styles.labelComments} ${styles.labelSelect}`}
-                    >
-                      Seleccioná tu interés
-                    </label> */}
                     <Field
                       as='select'
                       name='interes'

@@ -1,9 +1,9 @@
-import styles from './loader.module.css'
+import './loader.css'
 
 const Loader = () => {
   return (
-    <section className={`${styles.loader}`}>
-      <div className='spinner-border text-light' role='status'>
+    <section className='loader'>
+      <div className='spinner-border text-primary' role='status'>
         <span className='visually-hidden'>Loading...</span>
       </div>
     </section>

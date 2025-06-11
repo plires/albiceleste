@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AppProvider } from '@/context/app'
 import ScrollToTop from '@/utils/scrollToTop'
 
+import { ToastContainer } from 'react-toastify'
+
 import Header from '@/components/commons/Header'
 import Home from '@/pages/Home'
 import FanZone from '@/pages/FanZone'
@@ -19,6 +21,7 @@ function App() {
     <AppProvider>
       <Router>
         <Header />
+        <ToastContainer autoClose={false} />
         <main className='page'>
           <ScrollToTop />
           <Routes>
