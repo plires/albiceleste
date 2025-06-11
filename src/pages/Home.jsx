@@ -27,7 +27,7 @@ const Home = () => {
                 backgroundText='secondary'
                 textButton='QUIERO SABER MÁS'
                 backgroundButton='third'
-                link='/cultura-albiceleste'
+                link='/faqs'
               />
 
               <Cta
