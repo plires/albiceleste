@@ -17,7 +17,13 @@ const Events = () => {
 
       <div className='row contentEventos'>
         {/* Tienda */}
-        <Link to='#' data-aos='fade-up' className='evento tienda'>
+        <Link
+          to='#'
+          data-aos='fade-up'
+          target='_blank'
+          rel='noopener'
+          className='evento tienda'
+        >
           <div className='left'>
             <img src={tienda} alt='tienda' />
           </div>
@@ -32,7 +38,13 @@ const Events = () => {
         {/* Tienda end */}
 
         {/* Experiencia */}
-        <Link to='#' data-aos='fade-up' className='evento experiencia'>
+        <Link
+          to='#'
+          data-aos='fade-up'
+          target='_blank'
+          rel='noopener'
+          className='evento experiencia'
+        >
           <div className='left'>
             <span>EXPERIENCIA</span>
           </div>
@@ -44,7 +56,13 @@ const Events = () => {
         {/* Experiencia end */}
 
         {/* Bresh */}
-        <Link to='#' data-aos='fade-up' className='evento bresh'>
+        <Link
+          to='https://www.tixr.com/groups/daernightclubsouthflorida/events/bresh-daer-nightclub-140998'
+          data-aos='fade-up'
+          className='evento bresh'
+          target='_blank'
+          rel='noopener'
+        >
           <div className='left'>
             <img src={bresh} alt='bresh' />
           </div>
@@ -61,7 +79,13 @@ const Events = () => {
         {/* Bresh end */}
 
         {/* Fixture */}
-        <Link to='#' data-aos='fade-up' className='evento fixture'>
+        <Link
+          to='https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/articles/calendario-fixture-mundial-2026-partidos-fechas'
+          data-aos='fade-up'
+          className='evento fixture'
+          target='_blank'
+          rel='noopener'
+        >
           <div className='left'>
             <img
               className='img-fluid escudos'
@@ -80,7 +104,13 @@ const Events = () => {
         {/* Fixture end */}
 
         {/* FanZone */}
-        <Link to='#' data-aos='fade-up' className='evento fanzone'>
+        <Link
+          to='#'
+          data-aos='fade-up'
+          target='_blank'
+          rel='noopener'
+          className='evento fanzone'
+        >
           <div className='left'>
             <span>FANZONE</span>
           </div>

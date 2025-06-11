@@ -24,19 +24,7 @@ const Footer = () => {
             <div className='contentSocial'>
               <Link
                 className='transition'
-                to='/#'
-                target='_blank'
-                rel='noopener'
-              >
-                <img
-                  className='img-fluid'
-                  src={facebook}
-                  alt='facebook footer'
-                />
-              </Link>
-              <Link
-                className='transition'
-                to='/#'
+                to='https://www.tiktok.com/@afaalbiceleste'
                 target='_blank'
                 rel='noopener'
               >
@@ -44,7 +32,7 @@ const Footer = () => {
               </Link>
               <Link
                 className='transition'
-                to='/#'
+                to='https://www.instagram.com/afaalbiceleste'
                 target='_blank'
                 rel='noopener'
               >
@@ -76,6 +64,11 @@ const Footer = () => {
               <li>
                 <NavLink className='transition' to='/tienda'>
                   TIENDA
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className='transition' to='/faqs'>
+                  FAQS
                 </NavLink>
               </li>
             </ul>

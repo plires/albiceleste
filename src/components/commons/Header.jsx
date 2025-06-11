@@ -120,7 +120,7 @@ const Header = () => {
           <li>
             <NavLink
               className='transition anton'
-              to='/#'
+              to='https://www.instagram.com/afaalbiceleste'
               target='_blank'
               rel='noopener'
               onClick={() => changeIconMobile()}
@@ -135,7 +135,7 @@ const Header = () => {
           <li>
             <NavLink
               className='transition anton'
-              to='/#'
+              to='https://www.tiktok.com/@afaalbiceleste'
               target='_blank'
               rel='noopener'
               onClick={() => changeIconMobile()}
