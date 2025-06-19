@@ -28,13 +28,18 @@ const CasaCampeon = () => {
         <div className='row'>
           <div className='col-lg-10 offset-lg-1'>
             <p data-aos='fade-up'>
-              La Casa del Campeón es un recorrido inmersivo por la historia, la
-              pasión y la gloria del fútbol argentino.
+              La Casa del Campeón – Experiencia Albiceleste es un recorrido
+              sensorial y emocional que invita a cada visitante a sumergirse en
+              el corazón de la selección argentina y de sus hinchas. Es el
+              espacio donde el hincha y el jugador se encuentran, donde la
+              pasión y la gloria del fútbol argentino se viven en primera
+              persona.
             </p>
             <p data-aos='fade-up'>
-              Diseñada para hinchas fanáticos y familias, contará con cinco
-              zonas temáticas con memorabilia legendaria, contenido interactivo
-              y narrativas audiovisuales de última generación.
+              Desde el momento en que el visitante cruza la entrada, la
+              experiencia está pensada para que sienta la fuerza de la identidad
+              Albiceleste, una identidad que une a todos los argentinos en una
+              sola voz y un solo corazón.
             </p>
           </div>
         </div>
