@@ -115,15 +115,6 @@ const Header = () => {
               TIENDA
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className='transition anton'
-              to='/faqs'
-              onClick={() => changeIconMobile()}
-            >
-              FAQS
-            </NavLink>
-          </li>
         </ul>
         <ul className='social transition'>
           <li>

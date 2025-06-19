@@ -71,11 +71,6 @@ const Footer = () => {
                   TIENDA
                 </NavLink>
               </li>
-              <li>
-                <NavLink className='transition' to='/faqs'>
-                  FAQS
-                </NavLink>
-              </li>
             </ul>
             <div className='contentLogos'>
               <img

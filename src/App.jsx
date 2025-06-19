@@ -37,7 +37,7 @@ function App() {
               element={<AlbicelesteItinerante />}
             />
             <Route path='/tienda' element={<Tienda />} />
-            <Route path='/faqs' element={<Faqs />} />
+            {/* <Route path='/faqs' element={<Faqs />} /> */}
             <Route path='*' element={<NotFound />} />
           </Routes>
         </main>

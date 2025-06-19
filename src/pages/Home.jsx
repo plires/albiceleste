@@ -25,9 +25,8 @@ const Home = () => {
                 imgSrc={ctaAlbiceleste}
                 text='ALBICELESTE'
                 backgroundText='secondary'
-                textButton='QUIERO SABER MÁS'
+                textButton='PROXIMAMENTE'
                 backgroundButton='third'
-                link='/faqs'
               />
 
               <Cta
