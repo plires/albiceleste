@@ -51,7 +51,7 @@ const Events = () => {
 
         {/* Bresh */}
         <Link
-          to='https://www.tixr.com/groups/daernightclubsouthflorida/events/bresh-daer-nightclub-140998'
+          to='https://www.instagram.com/p/DK-PV_kNlFz/?img_index=1'
           data-aos='fade-up'
           className='evento bresh'
           target='_blank'
@@ -63,10 +63,8 @@ const Events = () => {
           <div className='separator'></div>
           <div className='right'>
             <div className='content'>
-              <span>14 de Junio - MIAMI</span>
-              <button className='btn comprar transition'>
-                COMPRAR TICKETS
-              </button>
+              <span>reviví la bresh albiceleste</span>
+              <button className='btn comprar transition'>revivíla</button>
             </div>
           </div>
         </Link>

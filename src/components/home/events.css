@@ -177,9 +177,11 @@
   border: solid 2px #ea5d84;
   background: #ea5d84 !important;
   color: white !important;
+  text-transform: uppercase;
 }
 
 .eventos .bresh .content span {
+  text-transform: uppercase;
   font-size: 0.9rem;
 }
 /* Breesh end */
